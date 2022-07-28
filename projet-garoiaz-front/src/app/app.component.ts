@@ -20,7 +20,7 @@ import {DOCUMENT} from '@angular/common';
 })
 
 export class AppComponent {
-  title = 'projet-morpion-front';
+  title = 'projet-garoiaz-front';
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
