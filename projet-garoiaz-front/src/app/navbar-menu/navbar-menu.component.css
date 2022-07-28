@@ -1,0 +1,59 @@
+mat-toolbar{
+  color: white;
+  height: 120px;
+  background-color: transparent;
+}
+
+.first-row{
+  background-color: #7f0000;
+  height: 30%;
+}
+
+.second-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #b71c1c;
+  height: 70%;
+}
+
+.second-row>button{
+  width: 15%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+mat-menu{
+  width: 100%;
+}
+
+mat-toolbar-row>button{
+  font-size: 2rem;
+}
+
+button.mat-menu-item{
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-sub{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-icon{
+  width: 20%;
+}
+
+#menu-span{
+  width: 70%;
+}
+
+.title{
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  padding-right: 2.5%;
+}

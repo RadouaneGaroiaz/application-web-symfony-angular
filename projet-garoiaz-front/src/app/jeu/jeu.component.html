@@ -1,0 +1,89 @@
+<div class="grid">
+
+  <div class="row row-1">
+    <div class="cell-spec">
+      <div class="list-item">
+        <div class="txt-lvl" *ngIf="profondeur == 1">Facile</div>
+        <div class="txt-lvl" *ngIf="profondeur == 2">Intermédiaire</div>
+        <div class="txt-lvl" *ngIf="profondeur == 3">Difficile</div>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="cell">
+
+      <div class="card showCard" [@lightTurn]="playerTurn ? 'pLight' : 'pNoLight'">
+<!--        <mat-card class="top-card"></mat-card>-->
+        <mat-card class="mid-card">
+          <mat-card-header>
+            <mat-card-title>Joueur</mat-card-title>
+          </mat-card-header>
+        </mat-card>
+        <mat-card class="bot-card" >
+          <mat-card-content>
+            <p>
+              O
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+
+      </div>
+
+    </div>
+
+    <div id="jeu-morpion" class="show cell-spec" [@openClose]="isOpen ? 'open' : 'closed'">
+      <mat-grid-list cols="3" rowHeight="1:1" gutterSize="3">
+        <mat-grid-tile
+          *ngFor="let tile of tiles"
+          [colspan]="tile.cols"
+          [rowspan]="tile.rows"
+          [id]="tile.id"
+          (click)="jouerCoup($event)"
+          matRipple
+          matRippleCentered
+          matRippleRadius="70"
+          matRippleUnbounded="true">
+<!--          <button mat-flat-button-->
+<!--            class="btn-hit"></button>-->
+          {{tile.text}}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <div class="cell">
+
+      <div class="card showCard">
+<!--        <mat-card class="top-card"></mat-card>-->
+        <mat-card class="mid-card">
+          <mat-card-header>
+            <mat-card-title>Bot</mat-card-title>
+          </mat-card-header>
+        </mat-card>
+        <mat-card class="bot-card" >
+          <mat-card-content>
+            <p>
+              X
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row-3">
+    <div class="cell cell-bot">
+      <div class="bot-game">
+        <div id="item_gameCount"></div>
+      </div>
+    </div>
+  </div>
+
+</div>

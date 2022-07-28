@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <mat-toolbar-row class="first-row">
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="second-row">
+    <button class="btn-menu" mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon><span id="menu-span">MENU</span></button>
+    <mat-menu class="menu-sub" #menu="matMenu">
+      <button class="btn-sub" mat-menu-item routerLink="/">Home</button>
+      <button class="btn-sub" mat-menu-item routerLink="/score">Scores</button>
+    </mat-menu>
+    <div class="title"></div>
+  </mat-toolbar-row>
+
+
+</mat-toolbar>

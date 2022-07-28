@@ -1,0 +1,7 @@
+<mat-grid-list id="homeGrid" [@openClose]="!isOpen ? 'open' : 'closed'" cols="1" rowHeight="4:1">
+  <mat-grid-tile colspan="1" rowspan="0.5">
+    <button class="btn-play" routerLink="level" mat-flat-button (click)="toogle()" [@disableButton]="disable ? 'disable' : 'enable'">
+      PLAY
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>

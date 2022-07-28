@@ -1,0 +1,13 @@
+<div class="title">Choix du niveau</div>
+<mat-divider class="divider"></mat-divider>
+<mat-grid-list class="show" cols="1" rowHeight="10:1" gutterSize="20" [@openClose]="isOpen ? 'open' : 'closed'">
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button class="btn-1" mat-raised-button routerLink="/jeu" [state]="{data:'1'}">Facile</button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button class="btn-2" mat-raised-button routerLink="/jeu" [state]="{data:'2'}">Intermédiaire</button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button class="btn-3" mat-raised-button routerLink="/jeu" [state]="{data:'3'}">Difficile</button>
+  </mat-grid-tile>
+</mat-grid-list>

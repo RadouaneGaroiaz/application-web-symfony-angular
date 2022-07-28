@@ -1,0 +1,29 @@
+<div class="flex-case flex-mid">
+  <h1 mat-dialog-title class="div-font-1">FIN DE PARTIE</h1>
+  <div mat-dialog-content class="flex-case">
+    <div class="div-font-1 text-ouput">{{data['val']}}</div>
+    <div class="div-font-1 text-ouput">Score : {{data['score']}}</div>
+  </div>
+</div>
+<mat-divider class="divider"></mat-divider>
+<div class="flex-btn" mat-dialog-actions>
+  <div>
+    <button class="btn-control" mat-button mat-dialog-close (click)="refresh()">RECOMMENCER</button>
+    <button class="btn-control" mat-button mat-dialog-close (click)="home()">QUITTER</button>
+  </div>
+  <div class="flex-bot">
+    <form class="flex-btn">
+      <mat-form-field class="form-field">
+        <mat-label class="div-font-1">Pseudo</mat-label>
+        <input class="div-font-1" type="text" matInput [formControl]="pseudoControl" [placeholder]="aleaValue" [(ngModel)]="value">
+        <mat-error class="div-font-1" *ngIf="pseudoControl.hasError('required')">
+          Pseudo <strong>requis</strong>
+        </mat-error>
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <button class="btn-add" mat-button (click)="addScore()" [disabled]="pseudoControl.status !== 'VALID'">OK</button>
+    </form>
+  </div>
+</div>
